@@ -6,19 +6,17 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.livroandroid.carros.R
-import br.com.livroandroid.carros.R.string.carros
 import br.com.livroandroid.carros.activity.CarroActivity
 import br.com.livroandroid.carros.adapter.CarroAdapter
 import br.com.livroandroid.carros.domain.Carro
 import br.com.livroandroid.carros.domain.CarroService
 import br.com.livroandroid.carros.domain.TipoCarro
 import br.com.livroandroid.carros.extensions.toast
-import kotlinx.android.synthetic.main.fragments_carros.*
+import kotlinx.android.synthetic.main.fragment_carros.*
 import kotlinx.android.synthetic.main.include_progress.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.uiThread
-import java.lang.Exception
 
 class CarrosFragment : Fragment() {
 
@@ -28,7 +26,7 @@ class CarrosFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        return inflater.inflate(R.layout.fragments_carros, container, false)
+        return inflater.inflate(R.layout.fragment_carros, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

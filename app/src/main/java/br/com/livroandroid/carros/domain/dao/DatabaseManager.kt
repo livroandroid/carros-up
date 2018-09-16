@@ -8,7 +8,7 @@ object DatabaseManager {
     private var dbInstance: CarrosDatabase
 
     init {
-        val appContext = CarrosApplication.getInstance().applicationContext
+        val appContext = CarrosApplication.getContext()
 
         // Configura o Room
         dbInstance = Room.databaseBuilder(

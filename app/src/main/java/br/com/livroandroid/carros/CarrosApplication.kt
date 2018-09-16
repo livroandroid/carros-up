@@ -1,6 +1,7 @@
 package br.com.livroandroid.carros
 
 import android.app.Application
+import android.content.Context
 
 import android.util.Log
 import androidx.multidex.MultiDexApplication
@@ -9,7 +10,7 @@ class CarrosApplication : MultiDexApplication() {
     // Chamado quando o Android criar o processo do aplicativo
     override fun onCreate() {
         super.onCreate()
-// Salva a instância para termos acesso como Singleton
+        // Salva a instância para termos acesso como Singleton
         appInstance = this
     }
 
@@ -24,6 +25,10 @@ class CarrosApplication : MultiDexApplication() {
                 throw IllegalStateException("Configure a classe de Application no AndroidManifest.xml")
             }
             return appInstance!!
+        }
+
+        fun getContext(): Context {
+            return getInstance().applicationContext
         }
 
     }
